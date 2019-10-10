@@ -1,7 +1,7 @@
 // ======================================================
 // required
 // ======================================================
-// require("dotenv").config();
+require("dotenv").config();
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 
@@ -18,7 +18,7 @@ var con = mysql.createConnection({
     user: "root",
 
     // Your password
-    password: "Fartdog90s",
+    password: process.env.PASSWORD,
     database: "bamazon_DB"
 });
 
