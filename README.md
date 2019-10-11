@@ -1,29 +1,43 @@
-# Foobar
+# Bamazon
 
-Foobar is a Python library for dealing with word pluralization.
+Week 12 Homework - Node.JS and MySQL - Bamazon eCommerce App
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+The following are required to run this app:
 
-```bash
-pip install foobar
+```javascript
+require("dotenv").config();
+var mysql = require("mysql");
+var inquirer = require("inquirer");
 ```
+
+Also, make sure the DB has been run, otherwise the app will have no server to connect to.
 
 ## Usage
 
-```python
-import foobar
+After you intall the required items above into the folder containing the app:
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+Go to MySQL and run the server to make sure you can connect to it.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+In the app folder and using your console, enter "node bamazonCustomer.js" to run the app.
 
-Please make sure to update tests as appropriate.
+You will be presented with a list of 10 items for purchase, including their ID#, name and price.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+Select an item by entering the ID# in the prompt (inquirer used for this portion).
+
+Enter a quantity that you would like to purchase.
+
+If that quantity is available, you will be presented with a summary of your purchase and the total cost.
+
+If that quantity is NOT available, you will get an apology and it will bring you back to the listing of items.
+
+When the purchase goes through, the DB is updated to reflect the remaining stock.
+
+### Usage - Video Demo
+
+[CLICK HERE](https://youtu.be/l03KE13utn8) for a demo of the app in action!
+
+## Thank you
+
+Thank you very much for checking out my app!
